@@ -43,6 +43,10 @@ jobs:
           make
           sudo make install
           cd $basedir
+          rm -rf inst/lib/gettext
+          rm -rf inst/include
+          rm -rf inst/share
+          rm -rf inst/libexec
           tar -cf $rootdir/gettext.tar inst
           rm -rf sources
           popd
