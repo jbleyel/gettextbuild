@@ -50,4 +50,4 @@ jobs:
           git add * || :
           git commit -m "update"
           git remote add upstream https://${GITHUB_TOKEN}@github.com/jbleyel/gettextbuild.git > /dev/null 2>&1
-          git push --quiet upstream master || echo "failed to push with error $?"
+          git push --quiet upstream main || echo "failed to push with error $?"
