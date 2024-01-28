@@ -14,5 +14,6 @@ jobs:
         run: |
           tar -xvf gettext.tar
           sudo cp inst/bin/xgettext /usr/sbin/
+          rm -rf inst/lib/gettext
           sudo cp inst/lib/* /usr/lib/
           xgettext -V
