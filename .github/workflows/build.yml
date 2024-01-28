@@ -43,12 +43,12 @@ jobs:
           make
           sudo make install
           cd $basedir
-          rm -rf inst/lib/gettext
-          rm -rf inst/include
-          rm -rf inst/share
-          rm -rf inst/libexec
+          sudo rm -rf inst/lib/gettext
+          sudo rm -rf inst/include
+          sudo rm -rf inst/share
+          sudo rm -rf inst/libexec
           tar -cf $rootdir/gettext.tar inst
-          rm -rf sources
+          sudo rm -rf sources
           popd
           git add -u
           git add * || :
