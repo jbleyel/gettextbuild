@@ -47,7 +47,7 @@ jobs:
           sudo rm -rf inst/include
           sudo rm -rf inst/share
           sudo rm -rf inst/libexec
-          tar -cf $rootdir/gettext.tar inst
+          tar -czf $rootdir/gettext.tar.gz inst
           sudo rm -rf sources
           popd
           git add -u

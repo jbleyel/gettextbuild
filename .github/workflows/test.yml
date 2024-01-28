@@ -16,7 +16,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          tar -xvf gettext.tar
+          tar -xvf gettext.tar.gz
           sudo cp inst/bin/xgettext /usr/sbin/
           sudo cp inst/lib/* /usr/lib/
           xgettext --no-wrap -L Python --from-code=UTF-8 -kpgettext:1c,2 --add-comments="TRANSLATORS:" -d enigma2 -s -o test.pot test.py
