@@ -13,7 +13,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           tar -xvf gettext.tar
-          cp inst/bin/xgettext inst/lib/
-          cd inst/lib
-          chmod +x xgettext
-          ./xgettext -V
+          sudo cp inst/bin/xgettext /usr/sbin/
+          sudo cp inst/lib/* /usr/lib/
+          xgettext -V
