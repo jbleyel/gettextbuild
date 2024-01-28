@@ -15,4 +15,4 @@ jobs:
           tar -xvf gettext.tar
           cd inst/bin
           chmod +x xgettext
-          xgettext -V
+          ./xgettext -V
