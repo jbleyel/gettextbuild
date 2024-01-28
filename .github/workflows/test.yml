@@ -2,7 +2,11 @@ name: test
 
 on:
   workflow_dispatch:
-
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,4 +20,5 @@ jobs:
           sudo cp inst/bin/xgettext /usr/sbin/
           rm -rf inst/lib/gettext
           sudo cp inst/lib/* /usr/lib/
-          xgettext -V
+          xgettext --no-wrap -L Python --from-code=UTF-8 -kpgettext:1c,2 --add-comments="TRANSLATORS:" -d enigma2 -s -o test.pot test.py
+          cat test.pot
